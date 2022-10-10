@@ -1,27 +1,36 @@
 
 # Welcome to the Unit 6 Discussion Forum!
 
+
 # Use the terms "equivalent" and "identical" to distinguish between objects and values. 
-equivalent = ''
-identical = ''
+equivalent = '=='
+identical = 'is'
 
 # Illustrate the difference further using your own examples with Python lists and the “is” operator.
 # is operator
 
+a = [81, 82, 83]
+b = [81, 82, 83]
+	
+print(a == b)
+print(a is b)
+	
+b = a
+print(a == b)
+print(a is b)
+	
 # Using your own Python list examples, explain how objects, references, and aliasing relate to one another.
-lists1 = [{}]
-lists2 = []
-lists3 = []
+
+b[0] = 5
+print(a)
 
 # Finally, create your own example of a function that modifies a list passed in as an argument. 
-# Hence, describe what your function does in terms of arguments, parameters, objects, and references. 
 def modify_a_list(a):
+    z = a[2] + a[1] + a[0]
+    a.append(z)
     print(a)
-
-
-
-
-
+modify_a_list(a)
+# Hence, describe what your function does in terms of arguments, parameters, objects, and references. 
 
 # Create your own unique examples for this assignment. Do not copy them from the textbook or any other source.
 
